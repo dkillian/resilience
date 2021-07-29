@@ -11,6 +11,7 @@ datNames <- data.frame(names(dat))
 
 names(dat)
 
+frq(dat$q_211)
 frq(dat$state)
 frq(dat$county)
 
@@ -54,6 +55,7 @@ dat <- dat %>%
   mutate(donor = ifelse(q_504 == 1, 1,0),
          conflict=ifelse(q_601==1, 1,0))
 
+frq(dat$donor)
 describe(dat$donor)
 describe(dat$conflict)
 
